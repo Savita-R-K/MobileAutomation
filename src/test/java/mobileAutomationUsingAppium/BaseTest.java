@@ -77,7 +77,14 @@ public class BaseTest {
     public void scrollToEnd(){
         boolean canWeScroll;
         do {
-            canWeScroll=(Boolean)((JavascriptExecutor)driver).executeScript("mobile: scrollGesture", ImmutableMap.of("left", 100, "top", 100, "width", 200, "height", 200, "direction", "down", "percent", 3.0));
+            canWeScroll=(Boolean)((JavascriptExecutor)driver)
+                    .executeScript("mobile: scrollGesture", ImmutableMap.of(
+                            "left", 100,
+                            "top", 100,
+                            "width", 200,
+                            "height", 200,
+                            "direction", "down",
+                            "percent", 3.0));
         }while (canWeScroll);
     }
 
